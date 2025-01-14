@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-zinc-900 text-white my-5 mx-10">
+    <nav class="mb-10 text-blue-300">
+        <a href="/register">Create Users</a>
+        <a href="/read" class="ml-4">Read Users</a>
+    </nav>
+    <h1 class="font-medium text-2xl tracking-tighter">Edit User</h1>
+    <form action="/updateuser/<%= user.name %>" method="post" class="py-10 flex flex-col gap-2">
+        <input type="text" placeholder="Username" name="name" value="<%=user.name %>" required class="w-60 bg-transparent outline-none border-2 border-zinc-600 rounded px-2">
+        <input type="email" placeholder="Email" name="email" value="<%=user.email %>" required class="w-60 bg-transparent outline-none border-2 border-zinc-600 rounded px-2">
+        <input type="password" placeholder="Password" name="password" value="<%=user.password %>" required class="w-60 bg-transparent outline-none border-2 border-zinc-600 rounded px-2">
+        <input type="text" placeholder="PFP_URL" name="img_URL" value="<%=user.img_URL %>" required class="w-60 bg-transparent outline-none border-2 border-zinc-600 rounded px-2">
+        <input type="submit" value="Save" class="w-20 bg-green-600 outline-none rounded px-2 py-1 my-4">
+    </form>
+</body>
+</html>
